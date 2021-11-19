@@ -6,14 +6,14 @@ import org.testng.annotations.Test;
 public class TestCase {
 
     private SwaggerRequest swaggerRequest = new SwaggerRequest();
-    private SwaggerResponse swaggerResponse= new SwaggerResponse();
+    private SwaggerResponse swaggerResponse = new SwaggerResponse();
 
     @Test
-    public void entegrationTest() {
+    public void integrationTest() {
 
-       Response response  = swaggerResponse.getResponse(swaggerRequest.getRequest());
+        Response response = swaggerResponse.getResponse(swaggerRequest.getRequest());
 
-       response.prettyPrint();
+        response.prettyPrint();
 
         response.then().assertThat().statusCode(200);
 

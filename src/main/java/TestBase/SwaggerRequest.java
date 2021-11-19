@@ -7,9 +7,8 @@ import utils.Constant;
 public class SwaggerRequest {
 
 
+    public RequestSpecification getRequest() {
 
-    public  RequestSpecification getRequest() {
-
-       return RestAssured.given().contentType("application/json").baseUri(Constant.endpoint + "/api/swagger.json");
+        return RestAssured.given().contentType("application/json").baseUri(Constant.endpoint + "/api/swagger.json");
     }
 }
